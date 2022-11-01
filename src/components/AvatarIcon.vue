@@ -27,7 +27,8 @@
 </template>
 
 <script>
-import Avatar from '../lib/avatar.js';
+import Avatar from '@/lib/avatar';
+
 export default {
   props: {
     width: {

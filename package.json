@@ -1,0 +1,27 @@
+{
+  "name": "avuetars",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/avuetars.umd.cjs",
+  "module": "./dist/avuetars.js",
+  "exports": {
+    ".": {
+      "import": "./dist/avuetars.js",
+      "require": "./dist/avuetars.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.41"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.2.0",
+    "vite": "^3.2.0"
+  }
+}

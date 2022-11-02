@@ -22,6 +22,7 @@
         :rx="roundness ? 160 : 0"
       />
     </mask>
+    <!-- eslint-disable vue/no-v-html -->
     <g mask="url(#mask)" v-html="content"></g>
   </svg>
 </template>
@@ -32,26 +33,30 @@ import Avatar from '@/lib/avatar';
 export default {
   props: {
     width: {
-      type: Number, // 48px
+      type: Number,
+      default: 80,
     },
     height: {
       type: Number,
+      default: 80,
     },
     density: {
       type: Number,
+      default: 10,
     },
     type: {
-      type: String, // grid
+      type: String,
+      default: 'grid',
     },
     colors: {
       type: Array,
+      default: () => ['#dfba69', '#2a2c31', '#fffedf', '#3e4147', '#5a2e2e'],
     },
     roundness: {
-      type: Boolean, // true
+      type: Boolean,
+      default: true,
     },
   },
-
-  SIZE: 80,
 
   data() {
     return {
